@@ -5,8 +5,10 @@ import java.util.Date;
 import java.util.Formatter;
 import java.util.Scanner;
 
-public class Pessoa {
 
+//CRIADO CLASSE PESSOA PARA TER OS DADOS NECESSARIOS PARA CADASTRO
+public class Pessoa {
+    //DADOS QUE A CLASSE PESSOA TERA
     String nome;
     Long telefone;
     Date dataNascimento;
@@ -21,16 +23,15 @@ public class Pessoa {
         this.dataCadPessoa = new Date();
     }
 
-    //CONTRUTOR VAZIO,
+    //CONTRUTOR VAZIO, BOA PRATICA
     public Pessoa() {
     }
 
     public static void cadastrar(String pessoa) {
         System.out.println(pessoa);
-
     }
 
-
+    //GETTERS E SETTERS DOS ATRIBUTOS DE PESSOA
     public String getNome() {
         return nome;
     }
@@ -70,11 +71,14 @@ public class Pessoa {
     public void setDataUltimaAlt(Date dataUltimaAlt) {
         this.dataUltimaAlt = dataUltimaAlt;
     }
+
+    //SOBRESCREVENDO OS ATRIBUTOS DATA PARA TER A FORMA CORRETA DE DATA
     @Override
     public String toString() {
+        //FAZENDO COM QUE DATA TENHA ESSES VALORES PADRAO
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         return "nome:"+nome +", telefone:" + telefone + ", data de nascimento:"+formatador.format(dataNascimento)+", data de cadastro:"
-                + formatador.format(dataCadPessoa)+ "data ultima alteracao: "+ (dataUltimaAlt==null?"":
+                + formatador.format(dataCadPessoa)+ ", data ultima alteracao: "+ (dataUltimaAlt==null?"":
                 formatador.format(dataUltimaAlt));
     }
 }
