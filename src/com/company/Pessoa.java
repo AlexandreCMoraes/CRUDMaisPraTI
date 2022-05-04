@@ -77,8 +77,9 @@ public class Pessoa {
     public String toString() {
         //FAZENDO COM QUE DATA TENHA ESSES VALORES PADRAO
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-        return "nome:"+nome +", telefone:" + telefone + ", data de nascimento:"+formatador.format(dataNascimento)+", data de cadastro:"
-                + formatador.format(dataCadPessoa)+ ", data ultima alteracao: "+ (dataUltimaAlt==null?"":
-                formatador.format(dataUltimaAlt));
+        return "\nNome: " + nome + "\nTelefone: " + telefone + "\nData de Nascimento: " + formatador.format(dataNascimento) +
+                "\nData de Cadastro: "
+                + formatador.format(dataCadPessoa) + "\nData Última Alteracao: " + (dataUltimaAlt==null?"":
+                formatador.format(dataUltimaAlt)) + "\n";
     }
 }

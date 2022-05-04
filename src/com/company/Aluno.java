@@ -28,8 +28,9 @@ public class Aluno extends Pessoa{
     @Override
     public String toString() {
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-        return "nome:"+nome +", telefone:" + telefone + ", data de nascimento:"+formatador.format(dataNascimento)+", data de cadastro:"
-                + formatador.format(dataCadPessoa)+ ", data ultima alteracao: "+ (dataUltimaAlt==null?"":
-                formatador.format(dataUltimaAlt))+ ", nota final do curso:"+notaFinalCurso;
+        return "\nNome: " + nome + "\nTelefone: " + telefone + "\nData de Nascimento :" + formatador.format(dataNascimento) +
+                "\nData de Cadastro: "
+                + formatador.format(dataCadPessoa) + "\nData Última Alteracao: " + (dataUltimaAlt==null?"":
+                formatador.format(dataUltimaAlt)) + "\nNota Final do Curso: " + notaFinalCurso + "\n";
     }
 }
